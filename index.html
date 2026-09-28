@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Woordtrainer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+    <div class="app-container">
+        <h1>Woordtrainer</h1>
+
+        <div class="top-info">
+            <div class="info-item">
+                <span>Score:</span>
+                <span id="scoreValue">0</span>
+            </div>
+            <div class="info-item">
+                <span>Timer:</span>
+                <span id="timerValue">--</span>
+            </div>
+        </div>
+
+        <div class="controls">
+
+            <div class="field">
+                <label for="csvInput">CSV import (optioneel)</label>
+                <input type="file" id="csvInput" accept=".csv">
+                <small>Als je hier een CSV kiest, wordt die gebruikt in plaats van Vertalingen.csv.</small>
+            </div>
+
+            <div class="field">
+                <label for="sourceLang">Brontaal</label>
+                <select id="sourceLang">
+                    <option value="">-- kies --</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="targetLang">Eindtaal</label>
+                <select id="targetLang">
+                    <option value="">-- kies --</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="filterType">Filter (optioneel)</label>
+                <select id="filterType">
+                    <option value="">Geen filter</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <button id="startStopBtn" disabled>Start</button>
+                <button id="translateBtn" disabled>Vertaal</button>
+                <button id="nextBtn" disabled>Next</button>
+                <button id="quitBtn">Quit</button>
+            </div>
+
+        </div>
+
+        <div class="outputs">
+            <div class="field">
+                <label for="outputSource">Woord (brontaal)</label>
+                <input id="outputSource" type="text" readonly>
+            </div>
+
+            <div class="field">
+                <label for="outputTarget">Vertaling (eindtaal)</label>
+                <input id="outputTarget" type="text" readonly>
+            </div>
+        </div>
+
+        <div class="status" id="status"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
