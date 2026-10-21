@@ -11,7 +11,7 @@ let score = 0;
 // Timer
 let timerId = null;
 let timeLeft = 0;
-const TIMER_SECONDS = 30;
+const TIMER_SECONDS = 10;
 
 // DOM
 const sourceSelect = document.getElementById('sourceLang');
